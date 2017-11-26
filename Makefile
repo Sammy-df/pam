@@ -7,7 +7,7 @@ OBJ=	$(SRC:.c=.o)
 
 LDFLAGS= -lcryptsetup
 
-CFLAGS= -W -Wall -Werror -fPIC -fno-stack-protector
+CFLAGS= -fPIC -fno-stack-protector
 
 LIB=	pamela.so
 
@@ -31,4 +31,4 @@ clean:
 	$(RM) $(OBJ)
 	$(RM) $(LIB)
 
-re: fclean all
+re: clean all
