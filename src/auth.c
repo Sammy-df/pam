@@ -73,8 +73,8 @@ int pam_sm_open_session(pam_handle_t *pamh, int flags, int argc, const char **ar
         else
           {
             // First Time
-            sprintf(cmd, "fallocate -l 500MB %s && echo '%s' | sudo cryptsetup luksFormat %s",// && echo '%s' | sudo cryptsetup luksOpen %s device-%s" && sudo mkfs.ext3 %s && mkdir %s && sudo mount %s %s && sudo chown %s:users %s -R",
-                          part_path, pass, part_path);//, pass, part_path, user, device, mount_path, device, mount_path, user, mount_path);
+            sprintf(cmd, "fallocate -l 500MB %s && echo '%s' | sudo cryptsetup luksFormat %s", && echo '%s' | sudo cryptsetup luksOpen %s device-%s" && sudo mkfs.ext3 %s && mkdir %s && sudo mount %s %s && sudo chown %s:users %s -R",
+                          part_path, pass, part_path, pass, part_path, user, device, mount_path, device, mount_path, user, mount_path);
             system(cmd);
           }
     }
