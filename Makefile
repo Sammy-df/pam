@@ -17,13 +17,13 @@ $(LIB):	$(OBJ)
 all:	$(LIB)
 
 install:
-	@sudo ./.install.shma
+	@sudo ./install.shma
 
 uninstall:
-	@sudo ./.uninstall.sh
+	@sudo ./uninstall.sh
 
 check:
-	@sudo ./.check.sh
+	@sudo ./check.sh
 
 test:
 
