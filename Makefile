@@ -17,7 +17,7 @@ $(LIB):	$(OBJ)
 all:	$(LIB)
 
 install:
-	@sudo ./install.shma
+	@sudo ./install.sh
 
 uninstall:
 	@sudo ./uninstall.sh
