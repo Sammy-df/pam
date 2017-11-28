@@ -61,3 +61,5 @@ fi
 echo -e "File '${authFile}' found."
 
 echo -e "${GREEN}OK!"
+
+exit 0

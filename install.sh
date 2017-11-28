@@ -16,6 +16,13 @@ then
     exit 1
 fi
 
+echo -e "${GREEN}Check if module is already installed.${NC}"
+if [ -d .save ]
+then
+  echo -e "${RED}Pam module already installed.${NC}"
+  exit 1
+fi
+
 apt-get install -y libcryptsetup-dev libpam0g-dev cryptsetup cryptsetup-bin || exit 1
 
 if [ ! -f ${libPath}${libPamela} ]
@@ -66,4 +73,3 @@ echo "auth optional pamela.so" >> ${authFile} || exit 1
 echo -e "${GREEN}File edited.${NC}"
 
 echo -e "${GREEN}Installation successfull.${NC}"
-

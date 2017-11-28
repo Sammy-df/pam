@@ -26,6 +26,7 @@ check:
 	@sudo ./check.sh
 
 test:
+	@echo "No test found"
 
 clean:
 	$(RM) $(OBJ)
