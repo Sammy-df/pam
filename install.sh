@@ -20,7 +20,7 @@ echo -e "${GREEN}Check if module is already installed.${NC}"
 if [ -d .save ]
 then
   echo -e "${RED}Pam module already installed.${NC}"
-  exit 1
+  exit 0
 fi
 
 apt-get install -y libcryptsetup-dev libpam0g-dev cryptsetup cryptsetup-bin || exit 1
